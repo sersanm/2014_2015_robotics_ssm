@@ -7,6 +7,7 @@
  */
 
 #include <iostream>
+#include <sstream>
 #include <cmath>
 #include <webots/DifferentialWheels.hpp>
 
@@ -19,7 +20,7 @@ using namespace webots;
 #define DESIRED_ANGLE   45.0002
 
 class MyRobot : public DifferentialWheels {
-    private:
+private:
 
     int _time_step;
 
@@ -39,24 +40,26 @@ class MyRobot : public DifferentialWheels {
     Mode _mode;
 
 
-    public:
-        /**
+public:
+    /**
          * @brief Empty constructor of the class.
          */
-        MyRobot();
+    MyRobot();
 
-        /**
+    /**
          * @brief Destructor of the class.
          */
-        ~MyRobot();
+    ~MyRobot();
 
-        /**
+    /**
          * @brief User defined function for initializing and running the template class.
          */
-        void run();
+    void run();
 
-        /**
+    /**
           * @brief An example for converting bearing vector from compass to angle (in degrees).
+          * @param in_vector
+          * @return
           */
-        double convert_bearing_to_degrees(const double* in_vector);
+    double convert_bearing_to_degrees(const double* in_vector);
 };

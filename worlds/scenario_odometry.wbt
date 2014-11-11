@@ -9,8 +9,8 @@ WorldInfo {
   northDirection -1 0 -1
 }
 Viewpoint {
-  orientation -0.206568 0.906705 0.367718 2.38921
-  position 14.2321 21.0994 -14.3127
+  orientation 0.36895 0.686147 0.626959 4.02828
+  position -13.106 35.9804 -1.95107
   follow "pioneer2"
 }
 Background {
@@ -1038,14 +1038,26 @@ DEF PIONEER2 DifferentialWheels {
   wheelRadius 0.0825
   speedUnit 0.1
   slipNoise 0.4
+  encoderNoise 0
+  encoderResolution 5
 }
 Solid {
   translation 0 1 0
+  rotation 0 1 0 1.5708
   children [
     Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 1 1 1
+        }
+      }
       geometry Box {
         size 6.5 2 6.5
       }
     }
   ]
+  boundingObject Box {
+    size 0.2 2 10
+  }
+  locked TRUE
 }

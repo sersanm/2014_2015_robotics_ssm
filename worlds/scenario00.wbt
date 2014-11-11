@@ -506,8 +506,7 @@ DEF PIONEER2 DifferentialWheels {
       width 160
       height 160
       spherical TRUE
-      windowPosition 0.273834 0.265432
-      pixelSize 0
+      windowPosition 0.843001 0.171897
       antiAliasing TRUE
     }
     GPS {
